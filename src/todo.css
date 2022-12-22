@@ -11,13 +11,14 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 8px 0;
-    margin-bottom: 12px;
+    /* padding: 8px 0;
+    margin-bottom: 12px; */
 }
 
-.card__description {
+.card__body {
     padding: 16px;
     font-size: 20px;
+    border-top: 1px solid black;
 }
 
 .card__title {
@@ -27,6 +28,10 @@
 }
 
 .card__number {
+    padding: 0 16px;
+}
+
+.card__userId {
     padding: 0 16px;
 }
 
