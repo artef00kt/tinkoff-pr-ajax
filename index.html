@@ -16,6 +16,7 @@
                 visibility: hidden;
             }
         </style>
+
     </head>
     <body>
         <div class="app container">
@@ -25,6 +26,7 @@
             <main>
                 <section class="add-todo">
                     <button id="addBtn" type="button">Create todo</button>
+                    <button id="togThemeBtn" type="button">Toggle theme</button>
                 </section>
                 <section class="todo-list"></section>
             </main>
@@ -42,22 +44,25 @@
                         d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
                 </svg>
                 <div class="modal_content">
-                    <div class="modal__title">Добавлене todo</div>
+                    <div class="modal__title">Добавление todo</div>
                     <form class="modal__main">
-                        <label class="modal__control" for="title"
-                            >Наименование:</label
-                        >
+                        <label class="modal__control" for="userId">Пользователь:</label>
+                        <input
+                            class="modal__control modal__control-userId"
+                            type="text"
+                            name="userId" />
+
+                        <label class="modal__control" for="title">Наименование:</label>
                         <input
                             class="modal__control modal__control-title"
                             type="text"
                             name="title" />
-                        <label class="modal__control" for="description"
-                            >Описание:</label
-                        >
+
+                        <label class="modal__control" for="body">Описание:</label>
                         <textarea
                             class="modal__control modal__control-des"
                             type="text"
-                            name="description"></textarea>
+                            name="body"></textarea>
 
                         <div class="form-errors"></div>
 
@@ -67,6 +72,44 @@
                     </form>
                 </div>
             </div>
+
+            <div class="modalUpd" data-modal="2">
+                <svg
+                    class="modal__cross js-modal-close"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+                </svg>
+                <div class="modal_content">
+                    <div class="modal__title">Редактирование todo #<span class="modal__title-id"></span></div>
+                    <form class="modal__main">
+                        <label class="modal__control" for="userIdUpd">Пользователь:</label>
+                        <input
+                            class="modal__control modal__control-userId"
+                            type="text"
+                            name="userIdUpd" />
+
+                        <label class="modal__control" for="titleUpd">Наименование:</label>
+                        <input
+                            class="modal__control modal__control-title"
+                            type="text"
+                            name="titleUpd" />
+
+                        <label class="modal__control" for="bodyUpd">Описание:</label>
+                        <textarea
+                            class="modal__control modal__control-des"
+                            type="text"
+                            name="bodyUpd"></textarea>
+
+                        <div class="formUpd-errors"></div>
+
+                        <button class="modal__control submit-btn-upd" type="button">
+                            Изменить
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </body>
+    </bodyс>
 </html>
